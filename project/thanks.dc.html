@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap');
+:root{--cream:#F7F4EE;--paper:#FCFAF6;--ink:#1A1A18;--ink-soft:#4A4A46;--line:rgba(26,26,24,0.10);--line-strong:rgba(26,26,24,0.22);--rust:#9B4A3A;--font-display:'Bebas Neue',sans-serif;--font-editorial:'Cormorant Garamond',Georgia,serif;--font-body:'Montserrat',Arial,sans-serif;--ease:cubic-bezier(0.22,1,0.36,1);--section-pad-x:3rem;--content-max:1280px;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--cream);color:var(--ink-soft);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;}
+::selection{background:var(--rust);color:var(--paper);}
+</style>
+</helmet>
+
+<div style="background:var(--cream);min-height:100vh;display:flex;flex-direction:column;">
+  <dc-import name="SiteNav" hint-size="100%,76px"></dc-import>
+
+  <section style="flex:1;display:flex;align-items:center;border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:8rem var(--section-pad-x);width:100%;">
+      <div style="max-width:52ch;">
+        <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:2rem;" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">Message Sent</div>
+        <h1 style="font-family:var(--font-editorial);font-weight:300;font-style:italic;color:var(--ink);margin:0;font-size:clamp(2.75rem,5.5vw,4.5rem);line-height:1.06;">Thank you.</h1>
+        <p style="margin:28px 0 0;font-size:1.0625rem;line-height:1.85;color:var(--ink-soft);">Your message came through. I will follow up within one business day.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:3rem;">
+          <a href="Work.dc.html" style="text-decoration:none;color:inherit;display:inline-flex;align-items:center;gap:10px;padding:15px 28px;font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:1px solid var(--ink);transition:background 160ms var(--ease),border-color 160ms var(--ease);" style-hover="background:var(--rust);border-color:var(--rust);">View Work
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"><line x1="4" y1="12" x2="19" y2="12"></line><polyline points="13 6 19 12 13 18"></polyline></svg>
+          </a>
+          <a href="Home.dc.html" style="text-decoration:none;color:inherit;display:inline-flex;align-items:center;gap:10px;padding:15px 28px;font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink);border:1px solid var(--line-strong);transition:border-color 160ms var(--ease);" style-hover="border-color:var(--ink);">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

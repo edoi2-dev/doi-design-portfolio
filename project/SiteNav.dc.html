@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap');
+:root{--cream:#F7F4EE;--paper:#FCFAF6;--ink:#1A1A18;--ink-soft:#4A4A46;--line:rgba(26,26,24,0.10);--line-strong:rgba(26,26,24,0.22);--rust:#9B4A3A;--rust-deep:#823A2C;--ink-muted:rgba(26,26,24,0.55);--font-display:'Bebas Neue',sans-serif;--font-editorial:'Cormorant Garamond',Georgia,serif;--font-body:'Montserrat',Arial,sans-serif;--ease:cubic-bezier(0.22,1,0.36,1);--section-pad-x:3rem;}
+</style>
+</helmet>
+<header style="position:sticky;top:0;z-index:50;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--section-pad-x);background:rgba(247,244,238,0.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);">
+  <a href="Home.dc.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;" aria-label="Eric Doi, home">
+    <img src="assets/logos/Doi-Design-logo.svg" alt="Eric Doi" style="height:24px;display:block;" />
+  </a>
+  <nav style="display:flex;align-items:center;gap:32px;" aria-label="Primary">
+    <sc-for list="{{ links }}" as="l" hint-placeholder-count="3">
+      <a href="{{ l.href }}" style="text-decoration:none;color:inherit;font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;padding-bottom:3px;color:{{ l.color }};border-bottom:{{ l.border }};transition:color 160ms var(--ease);" style-hover="color:var(--ink);">{{ l.label }}</a>
+    </sc-for>
+  </nav>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;active&quot;:{&quot;editor&quot;:null,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const active = this.props.active || '';
+    const defs = [
+      { key: 'work', label: 'Work', href: 'Work.dc.html' },
+      { key: 'resume', label: 'Resume', href: 'Resume.dc.html' },
+      { key: 'contact', label: 'Contact', href: 'Contact.dc.html' },
+    ];
+    const links = defs.map(d => ({
+      label: d.label,
+      href: d.href,
+      color: d.key === active ? 'var(--ink)' : 'var(--ink-soft)',
+      border: d.key === active ? '1px solid var(--rust)' : '1px solid transparent',
+    }));
+    return { links };
+  }
+}
+</script>
+</body>
+</html>

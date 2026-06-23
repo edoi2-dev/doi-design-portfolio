@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap');
+:root{--cream:#F7F4EE;--paper:#FCFAF6;--ink:#1A1A18;--ink-soft:#4A4A46;--line:rgba(26,26,24,0.10);--line-strong:rgba(26,26,24,0.22);--rust:#9B4A3A;--rust-deep:#823A2C;--ink-muted:rgba(26,26,24,0.55);--font-display:'Bebas Neue',sans-serif;--font-editorial:'Cormorant Garamond',Georgia,serif;--font-body:'Montserrat',Arial,sans-serif;--ease:cubic-bezier(0.22,1,0.36,1);--section-pad-x:3rem;--content-max:1120px;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--cream);color:var(--ink-soft);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+::selection{background:var(--rust);color:var(--paper);}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+</style>
+</helmet>
+
+<div style="background:var(--cream);">
+  <dc-import name="SiteNav" active="work" hint-size="100%,76px"></dc-import>
+
+  <!-- HERO -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:3rem var(--section-pad-x) 3.5rem;">
+      <a href="Work.dc.html" style="text-decoration:none;color:inherit;display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);transition:color 160ms var(--ease);" style-hover="color:var(--rust);">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"><polyline points="11 6 5 12 11 18"></polyline><line x1="5" y1="12" x2="19" y2="12"></line></svg>All Work
+      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:2.5rem;">
+        <span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:6px 12px;">Self-initiated</span>
+        <span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);border:1px solid var(--line-strong);padding:6px 12px;">Brand Identity System</span>
+      </div>
+      <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-top:2rem;">Case Study, Personal Brand System</div>
+      <h1 style="font-family:var(--font-editorial);font-weight:300;color:var(--ink);margin:14px 0 0;font-size:clamp(2.75rem,6vw,5rem);line-height:1.04;">Building a brand <em style="font-style:italic;">from zero.</em></h1>
+      <p style="margin:24px 0 0;font-size:1.0625rem;line-height:1.85;color:var(--ink-soft);max-width:70ch;">A self-directed exercise: build a complete brand identity system, mark, color, typography, voice, with the same rigor I bring to company and employer brands.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.75rem;border-top:1px solid var(--line);padding-top:1.75rem;">
+        <sc-for list="{{ heroMeta }}" as="m" hint-placeholder-count="3">
+          <div>
+            <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px;">{{ m.k }}</div>
+            <div style="font-family:var(--font-editorial);font-weight:400;font-size:1.25rem;color:var(--ink);line-height:1.2;">{{ m.v }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <!-- hero visual: DOI mark on cream -->
+    <div style="background:var(--cream);border-top:1px solid var(--line);padding:5rem var(--section-pad-x);display:flex;justify-content:center;">
+      <img src="assets/logos/Doi-Marketing-Design.png" alt="DOI signature mark" style="width:100%;max-width:560px;display:block;margin:0 auto;">
+    </div>
+  </section>
+
+  <!-- SECTION 1: THE EXERCISE -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">The Exercise</div>
+      <h2 style="font-family:var(--font-editorial);font-weight:300;color:var(--ink);margin:18px 0 0;font-size:clamp(1.85rem,3.4vw,2.75rem);line-height:1.12;">Why I built this.</h2>
+      <p style="margin:20px 0 3rem;font-size:1.0625rem;line-height:1.85;color:var(--ink-soft);max-width:76ch;">After years of building brand systems for other companies, I wanted to apply the same process to myself, start with nothing, and make every decision deliberately: a logo mark, a color palette, a typographic system, and a voice. The goal wasn't just a nice-looking result. It was to demonstrate the full process, end to end, the same way I'd approach it for an employer's brand.</p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;">
+        <div style="background:var(--paper);border:1px solid var(--line);border-top:2px solid var(--rust);padding:2.5rem;">
+          <h3 style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);margin:0;font-size:1.5rem;line-height:1;">The Brief (to myself)</h3>
+          <p style="margin:14px 0 0;font-size:0.975rem;line-height:1.85;color:var(--ink-soft);">Design a personal mark that works at any size, from a favicon to a large format print, and carries meaning beyond the surface. It needed to feel intentional, not decorative.</p>
+        </div>
+        <div style="background:var(--paper);border:1px solid var(--line);border-top:2px solid var(--ink);padding:2.5rem;">
+          <h3 style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);margin:0;font-size:1.5rem;line-height:1;">The Approach</h3>
+          <p style="margin:14px 0 0;font-size:0.975rem;line-height:1.85;color:var(--ink-soft);">Start with the mark, build outward. Every subsequent decision, color, type, voice, had to support and reinforce the mark's geometry and meaning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: THE MARK -->
+  <section style="border-bottom:1px solid var(--line);background:var(--paper);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:3rem;" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">The Mark</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:stretch;">
+        <div style="position:relative;overflow:hidden;border:1px solid var(--line-strong);background:var(--cream);">
+          <img src="uploads/Asset 2@4x.png" alt="DOI mark" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:3rem;">
+
+        </div>
+        <div style="display:flex;flex-direction:column;">
+          <sc-for list="{{ mark }}" as="m" hint-placeholder-count="4">
+            <div style="padding:2rem 0;border-top:1px solid var(--line);">
+              <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:12px;">
+                <span style="font-family:var(--font-display);font-size:1.75rem;color:var(--rust);line-height:1;">{{ m.num }}</span>
+                <h3 style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);margin:0;font-size:1.5rem;line-height:1;">{{ m.title }}</h3>
+              </div>
+              <p style="margin:0;font-size:0.975rem;line-height:1.85;color:var(--ink-soft);">{{ m.body }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: COLOR -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">Color System</div>
+      <p style="margin:20px 0 3rem;font-size:1.0625rem;line-height:1.85;color:var(--ink-soft);max-width:74ch;">A restrained palette built around one accent color used sparingly, for emphasis, never for large fills. The goal was a system where every color choice felt deliberate, not decorative.</p>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;">
+        <sc-for list="{{ colors }}" as="c" hint-placeholder-count="5">
+          <div style="border:1px solid var(--line);background:var(--paper);">
+            <div style="height:140px;background:{{ c.hex }};border-bottom:1px solid var(--line);"></div>
+            <div style="padding:1.25rem;">
+              <div style="font-family:var(--font-body);font-size:0.8125rem;font-weight:600;letter-spacing:0.02em;color:var(--ink);">{{ c.name }}</div>
+              <div style="font-family:var(--font-body);font-size:11px;letter-spacing:0.06em;color:var(--ink-muted);margin-top:4px;">{{ c.hex }}</div>
+              <div style="font-size:0.8125rem;line-height:1.5;color:var(--ink-soft);margin-top:10px;">{{ c.use }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: TYPOGRAPHY -->
+  <section style="border-bottom:1px solid var(--line);background:var(--paper);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:3rem;" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">Typography</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+        <div style="background:var(--cream);border:1px solid var(--line);padding:2.5rem;">
+          <div style="font-family:var(--font-display);color:var(--ink);font-size:4.5rem;line-height:0.85;">Aa</div>
+          <div style="height:1px;background:var(--line);margin:1.5rem 0;"></div>
+          <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--rust);">Display</div>
+          <h3 style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);margin:6px 0 0;font-size:1.5rem;line-height:1;">Bebas Neue</h3>
+          <p style="margin:12px 0 0;font-size:0.9rem;line-height:1.7;color:var(--ink-soft);">Headlines and large statements. Condensed, confident, all caps.</p>
+        </div>
+        <div style="background:var(--cream);border:1px solid var(--line);padding:2.5rem;">
+          <div style="font-family:var(--font-editorial);font-style:italic;font-weight:400;color:var(--ink);font-size:4.5rem;line-height:0.85;">Aa</div>
+          <div style="height:1px;background:var(--line);margin:1.5rem 0;"></div>
+          <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--rust);">Editorial</div>
+          <h3 style="font-family:var(--font-editorial);font-style:italic;font-weight:400;color:var(--ink);margin:6px 0 0;font-size:1.75rem;line-height:1;">Cormorant Garamond</h3>
+          <p style="margin:12px 0 0;font-size:0.9rem;line-height:1.7;color:var(--ink-soft);">Pull quotes and emphasis. Italic, editorial, human.</p>
+        </div>
+        <div style="background:var(--cream);border:1px solid var(--line);padding:2.5rem;">
+          <div style="font-family:var(--font-body);font-weight:300;color:var(--ink);font-size:4.5rem;line-height:0.85;">Aa</div>
+          <div style="height:1px;background:var(--line);margin:1.5rem 0;"></div>
+          <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--rust);">Body & UI</div>
+          <h3 style="font-family:var(--font-body);font-weight:500;color:var(--ink);margin:6px 0 0;font-size:1.375rem;line-height:1.1;">Montserrat Light</h3>
+          <p style="margin:12px 0 0;font-size:0.9rem;line-height:1.7;color:var(--ink-soft);">Body copy, labels, and interface. Quiet, legible, neutral.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING QUOTE -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:880px;margin:0 auto;padding:6.5rem var(--section-pad-x);text-align:center;">
+      <div style="font-family:var(--font-display);font-size:3rem;color:var(--rust);line-height:0.6;margin-bottom:1rem;">&ldquo;</div>
+      <blockquote style="margin:0;font-family:var(--font-editorial);font-weight:300;font-style:italic;font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.4;color:var(--ink);">A brand system built the way I'd build one for a team. Every decision intentional, every detail able to be explained.</blockquote>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const heroMeta = [
+      { k: 'Type', v: 'Brand Identity System' },
+      { k: 'Scope', v: 'Full System' },
+      { k: 'Role', v: 'Sole Designer & Strategist' },
+    ];
+    const mark = [
+      { num: '01', title: 'Surface read', body: 'A clean, modern geometric mark built to scale. Works at 16px as a favicon or at large format. Designed with swag in mind from day one.' },
+      { num: '02', title: 'Hidden initials', body: 'The mark spells my initials, D. O. I., encoded directly into the geometry. The white strokes and negative space form the letters without being literal.' },
+      { num: '03', title: 'Personal layer', body: 'Two hidden \u201cK\u201d shapes in the geometry reference my two sons. A detail nobody notices unless they\u2019re told, but one that makes the mark mine.' },
+      { num: '04', title: 'The takeaway', body: 'A mark with this much intention demonstrates how I approach design generally. Surface-level polish backed by decisions that can be explained and defended.' },
+    ];
+    const colors = [
+      { name: 'Ink', hex: '#0A0B0C', use: 'Primary background' },
+      { name: 'Charcoal', hex: '#2F3237', use: 'Cards' },
+      { name: 'Crimson', hex: '#751D2F', use: 'Accent' },
+      { name: 'Silver', hex: '#B0B3B8', use: 'Secondary text' },
+      { name: 'Off-White', hex: '#F7F7F8', use: 'Primary text on dark' },
+    ];
+    return { heroMeta, mark, colors };
+  }
+}
+</script>
+</body>
+</html>

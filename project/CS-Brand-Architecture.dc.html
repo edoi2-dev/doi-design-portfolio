@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap');
+:root{--cream:#F7F4EE;--paper:#FCFAF6;--ink:#1A1A18;--ink-soft:#4A4A46;--line:rgba(26,26,24,0.10);--line-strong:rgba(26,26,24,0.22);--rust:#9B4A3A;--rust-deep:#823A2C;--ink-muted:rgba(26,26,24,0.55);--font-display:'Bebas Neue',sans-serif;--font-editorial:'Cormorant Garamond',Georgia,serif;--font-body:'Montserrat',Arial,sans-serif;--ease:cubic-bezier(0.22,1,0.36,1);--section-pad-x:3rem;--content-max:1120px;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--cream);color:var(--ink-soft);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+::selection{background:var(--rust);color:var(--paper);}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+</style>
+</helmet>
+
+<div style="background:var(--cream);">
+  <dc-import name="SiteNav" active="work" hint-size="100%,76px"></dc-import>
+
+  <!-- HERO -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:3rem var(--section-pad-x) 4.5rem;">
+      <a href="Work.dc.html" style="text-decoration:none;color:inherit;display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);transition:color 160ms var(--ease);" style-hover="color:var(--rust);">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"><polyline points="11 6 5 12 11 18"></polyline><line x1="5" y1="12" x2="19" y2="12"></line></svg>All Work
+      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:2.5rem;">
+        <span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--paper);background:var(--rust);padding:6px 12px;">SoundVision Technologies</span>
+        <span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);border:1px solid var(--line-strong);padding:6px 12px;">Brand Architecture</span>
+        <span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);border:1px solid var(--line-strong);padding:6px 12px;">10 Years</span>
+      </div>
+      <h1 style="font-family:var(--font-editorial);font-weight:300;color:var(--ink);margin:1.75rem 0 0;font-size:clamp(2.75rem,6vw,5rem);line-height:1.04;">Two Brands. <em style="font-style:italic;">One Ecosystem.</em></h1>
+      <p style="margin:24px 0 0;font-size:1.0625rem;line-height:1.85;color:var(--ink-soft);max-width:74ch;">TruAudio and VSSL are complementary products sold through the same dealer channels by the same company. Keeping them distinct while making them work together required sustained, deliberate brand architecture thinking, maintained informally but consistently for over a decade.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:2.75rem;border-top:1px solid var(--line);padding-top:1.75rem;">
+        <sc-for list="{{ heroMeta }}" as="m" hint-placeholder-count="4">
+          <div>
+            <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px;">{{ m.k }}</div>
+            <div style="font-family:var(--font-editorial);font-weight:400;font-size:1.25rem;color:var(--ink);line-height:1.2;">{{ m.v }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: STRUCTURE -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">The Brand Structure</div>
+      <h2 style="font-family:var(--font-editorial);font-weight:300;color:var(--ink);margin:18px 0 0;font-size:clamp(1.85rem,3.4vw,2.75rem);line-height:1.12;">One parent company. <em style="font-style:italic;">Two distinct brand identities.</em></h2>
+      <p style="margin:20px 0 3rem;font-size:1.0625rem;line-height:1.85;color:var(--ink-soft);max-width:74ch;">TruAudio and VSSL are not competing brands. They are complementary products: speakers need an amplifier, and an amplifier needs speakers. The brand architecture challenge was keeping them visually and tonally distinct while allowing them to coexist in the same dealer's portfolio and often the same installation.</p>
+
+      <!-- DIAGRAM -->
+      <div>
+        <div style="background:var(--ink);padding:1.5rem 2rem;text-align:center;">
+          <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--rust);margin-bottom:6px;">Parent Company</div>
+          <div style="font-family:var(--font-display);text-transform:uppercase;color:var(--cream);font-size:2rem;line-height:1;letter-spacing:0.02em;">SoundVision Technologies</div>
+        </div>
+        <div style="display:flex;justify-content:center;color:var(--line-strong);padding:4px 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="3" x2="12" y2="21"></line></svg></div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;">
+          <sc-for list="{{ brands }}" as="b" hint-placeholder-count="2">
+            <div style="background:var(--paper);border:1px solid var(--line);border-top:3px solid {{ b.accent }};padding:2.25rem;">
+              <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);">{{ b.tag }}</div>
+              <h3 style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);margin:6px 0 6px;font-size:2.25rem;line-height:0.95;">{{ b.name }}</h3>
+              <div style="font-family:var(--font-editorial);font-style:italic;font-weight:400;font-size:1.25rem;color:{{ b.accent }};margin-bottom:1.5rem;">{{ b.tagline }}</div>
+              <div style="display:flex;flex-direction:column;gap:0;">
+                <sc-for list="{{ b.rows }}" as="r" hint-placeholder-count="4">
+                  <div style="padding:0.85rem 0;border-top:1px solid var(--line);">
+                    <span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted);">{{ r.k }}</span>
+                    <div style="font-size:0.9rem;line-height:1.55;color:var(--ink-soft);margin-top:4px;">{{ r.v }}</div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="background:var(--cream);border:1px solid var(--line-strong);border-top:none;padding:1.75rem 2rem;text-align:center;">
+          <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:10px;">Shared Ecosystem</div>
+          <p style="margin:0;font-size:0.95rem;line-height:1.7;color:var(--ink-soft);max-width:80ch;margin-left:auto;margin-right:auto;">Same dealer network. Same distribution partners. Same sales team. Same install ecosystem. Products are complementary by design: TruAudio speakers require an amplifier, VSSL amplifiers require speakers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: CHALLENGE -->
+  <section style="border-bottom:1px solid var(--line);background:var(--paper);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:3rem;" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">The Challenge</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+        <sc-for list="{{ challenge }}" as="c" hint-placeholder-count="3">
+          <div style="background:var(--cream);border:1px solid var(--line);border-top:2px solid var(--rust);padding:2.25rem;">
+            <span style="font-family:var(--font-display);font-size:1.75rem;color:var(--rust);line-height:1;">{{ c.num }}</span>
+            <h3 style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);margin:14px 0 0;font-size:1.4rem;line-height:1.05;">{{ c.title }}</h3>
+            <p style="margin:14px 0 0;font-size:0.9375rem;line-height:1.8;color:var(--ink-soft);">{{ c.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: POSITIONING -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:3rem;" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">The Positioning</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;">
+        <sc-for list="{{ positioning }}" as="p" hint-placeholder-count="2">
+          <div style="background:var(--paper);border:1px solid var(--line);border-top:3px solid {{ p.accent }};padding:2.5rem;">
+            <h3 style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);margin:0;font-size:2rem;line-height:1;">{{ p.name }}</h3>
+            <div style="font-family:var(--font-editorial);font-style:italic;font-weight:400;font-size:1.375rem;color:{{ p.accent }};margin:12px 0 1.75rem;line-height:1.3;">{{ p.statement }}</div>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;">
+              <sc-for list="{{ p.bullets }}" as="b" hint-placeholder-count="5"><li style="font-size:0.9375rem;line-height:1.7;color:var(--ink-soft);padding-left:18px;position:relative;" style-before="content:'';position:absolute;left:0;top:9px;width:6px;height:6px;background:{{ p.accent }};">{{ b }}</li></sc-for>
+            </ul>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: CHANNEL -->
+  <section style="border-bottom:1px solid var(--line);background:var(--paper);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:3rem;" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">Channel Strategy</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+        <sc-for list="{{ channels }}" as="c" hint-placeholder-count="3">
+          <div style="background:var(--cream);border:1px solid var(--line);padding:2.25rem;">
+            <h3 style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);margin:0;font-size:1.5rem;line-height:1.02;">{{ c.title }}</h3>
+            <p style="margin:14px 0 1.5rem;font-size:0.9375rem;line-height:1.75;color:var(--ink-soft);">{{ c.body }}</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              <sc-for list="{{ c.badges }}" as="bd" hint-placeholder-count="2"><span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:{{ bd.color }};border:1px solid {{ bd.border }};padding:6px 11px;">{{ bd.label }}</span></sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING QUOTE -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:900px;margin:0 auto;padding:6.5rem var(--section-pad-x);text-align:center;">
+      <div style="font-family:var(--font-display);font-size:3rem;color:var(--rust);line-height:0.6;margin-bottom:1rem;">&ldquo;</div>
+      <blockquote style="margin:0;font-family:var(--font-editorial);font-weight:300;font-style:italic;font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.4;color:var(--ink);">The hardest brand architecture problems aren't about aesthetics. They're about clarity under pressure, keeping every audience feeling like the brand was built specifically for them.</blockquote>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const ink = 'var(--ink)';
+    const rust = 'var(--rust)';
+    const heroMeta = [
+      { k: 'Brands Managed', v: '2' },
+      { k: 'Duration', v: '10 Years' },
+      { k: 'Channels', v: 'Global' },
+      { k: 'Parent', v: 'SVT' },
+    ];
+    const brands = [
+      { tag: 'Brand 01', name: 'TruAudio', accent: ink, tagline: 'Built by installers, for installers.', rows: [
+        { k: 'Category', v: 'Custom install speakers, CI and architectural audio' },
+        { k: 'Audience', v: 'CI integrators, commercial installers, residential AV' },
+        { k: 'Tone', v: 'Technical credibility, installer empathy, professional trust' },
+        { k: 'Market', v: 'Heavily saturated, differentiated by founder origin story' },
+      ]},
+      { tag: 'Brand 02', name: 'VSSL', accent: rust, tagline: 'Your music, everywhere in your home.', rows: [
+        { k: 'Category', v: 'Distributed audio streaming, whole-home amplification' },
+        { k: 'Audience', v: 'CI dealers, and end consumers via Amazon' },
+        { k: 'Tone', v: 'Consumer simplicity, lifestyle aspiration, ease of use' },
+        { k: 'Market', v: 'Emerging category, built from inception at SoundVision' },
+      ]},
+    ];
+    const challenge = [
+      { num: '01', title: 'Same channel, different message', body: 'Both brands go to market through the same CI dealer network. A dealer receives TruAudio content and VSSL content in the same week, sometimes the same email. The brand language had to be distinct enough that dealers instantly knew which brand they were looking at and what to do with it.' },
+      { num: '02', title: 'Two audiences, one brand', body: 'TruAudio\u2019s messaging speaks to the installer, addressing technical pain points an end customer will never care about. VSSL\u2019s messaging speaks to the end customer\u2019s desire for simplicity. Writing for both without letting the tones bleed into each other required consistent discipline across every asset.' },
+      { num: '03', title: 'A new brand inside an established one', body: 'VSSL was built from inception inside SoundVision, a company that already had a strong TruAudio identity. Building a second brand from scratch without it feeling like a TruAudio sub-brand, while keeping dealer relationships intact, required a genuinely separate identity from day one.' },
+    ];
+    const positioning = [
+      { name: 'TruAudio', accent: ink, statement: 'Built by installers, for installers.', bullets: [
+        'Messaging leads with installer empathy, not product specs.',
+        'Founders were CI integrators: they understand the job site, not just the product.',
+        'Marketing addresses pain points the end customer will never notice but the installer lives with daily.',
+        'In a saturated market, credibility is the differentiator.',
+        'Tone: professional, technical, peer-to-peer.',
+      ]},
+      { name: 'VSSL', accent: rust, statement: 'Your music, everywhere in your home.', bullets: [
+        'Messaging leads with the end-user experience, not the technical architecture.',
+        'Consumer simplicity: phone to distributed audio system, no complexity visible.',
+        'Dealer-facing content emphasizes ease of sell and ease of install.',
+        'Amazon channel requires consumer-grade clarity and lifestyle framing.',
+        'Tone: approachable, aspirational, lifestyle-forward.',
+      ]},
+    ];
+    const both = [{ label: 'TruAudio', color: 'var(--ink)', border: 'var(--line-strong)' }, { label: 'VSSL', color: 'var(--rust)', border: 'rgba(155,74,58,0.4)' }];
+    const channels = [
+      { title: 'CI Dealer Network', body: 'The shared backbone. Both brands reach integrators and installers through the same dealer relationships, requiring distinct but compatible sell-in materials.', badges: both },
+      { title: 'Global Distribution', body: 'Both brands move through the same international distribution partners, who carry the full SoundVision portfolio across markets.', badges: both },
+      { title: 'Amazon Consumer', body: 'VSSL only. A direct-to-consumer channel demanding lifestyle framing and consumer-grade clarity that TruAudio\u2019s installer audience never touches.', badges: [{ label: 'VSSL', color: 'var(--rust)', border: 'rgba(155,74,58,0.4)' }] },
+    ];
+    const relevance = ['Multiple audiences, one brand','Technical product, non-technical message','Building a brand in a new category'];
+    return { heroMeta, brands, challenge, positioning, channels, relevance };
+  }
+}
+</script>
+</body>
+</html>

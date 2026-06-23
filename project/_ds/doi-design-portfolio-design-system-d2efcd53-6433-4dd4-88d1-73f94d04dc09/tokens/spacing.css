@@ -1,0 +1,49 @@
+/* Doi Design Portfolio — Spacing, borders, radii, elevation, motion
+   --------------------------------------------------------------
+   Wide section padding, hairline borders, SHARP edges (no rounding),
+   NO drop shadows, NO gradients (placeholder fills excepted). */
+
+:root {
+  /* ---- Spacing scale (8px base) ---- */
+  --space-1:  0.25rem;  /* 4 */
+  --space-2:  0.5rem;   /* 8 */
+  --space-3:  0.75rem;  /* 12 */
+  --space-4:  1rem;     /* 16 */
+  --space-5:  1.5rem;   /* 24 */
+  --space-6:  2rem;     /* 32 */
+  --space-7:  3rem;     /* 48 — standard card padding */
+  --space-8:  4rem;     /* 64 */
+  --space-9:  6rem;     /* 96 — section vertical rhythm */
+  --space-10: 8rem;     /* 128 */
+
+  --section-pad-x: 3rem;   /* wide horizontal padding */
+  --section-pad-y: 6rem;
+  --card-pad:      2rem;
+  --content-max:   1280px; /* @kind spacing */ /* container ceiling */
+
+  /* ---- Borders ---- */
+  --border-width:   1px;
+  --border-line:    1px solid var(--border);
+  --border-line-strong: 1px solid var(--border-strong);
+  --accent-bar:     2px solid var(--rust); /* top accent on cards */
+
+  /* ---- Radii — SHARP. No rounded corners on cards or buttons. ---- */
+  --radius-none: 0;
+  --radius-full: 9999px; /* reserved for avatars / status dots only */
+
+  /* ---- Elevation ----
+     Light editorial UI: depth comes from hairline borders and white
+     space, NOT shadows. There is no drop-shadow system on this site. */
+  --shadow-none: none;
+
+  /* ---- Motion ---- */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);  /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);  /* @kind other */
+  --dur-fast:    160ms; /* @kind other */
+  --dur:         280ms; /* @kind other */
+  --dur-slow:    520ms; /* @kind other */
+
+  /* ---- Layout helpers ---- */
+  --nav-height: 76px; /* @kind spacing */
+  --eyebrow-line: 32px; /* @kind spacing */ /* fixed rust eyebrow rule */
+}

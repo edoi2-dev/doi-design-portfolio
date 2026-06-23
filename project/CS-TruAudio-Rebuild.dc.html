@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap');
+:root{--cream:#F7F4EE;--paper:#FCFAF6;--ink:#1A1A18;--ink-soft:#4A4A46;--line:rgba(26,26,24,0.10);--line-strong:rgba(26,26,24,0.22);--rust:#9B4A3A;--rust-deep:#823A2C;--ink-muted:rgba(26,26,24,0.55);--placeholder-fill:linear-gradient(135deg,#E8E3D8 0%,#D8D2C4 100%);--font-display:'Bebas Neue',sans-serif;--font-editorial:'Cormorant Garamond',Georgia,serif;--font-body:'Montserrat',Arial,sans-serif;--ease:cubic-bezier(0.22,1,0.36,1);--section-pad-x:3rem;--content-max:1120px;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--cream);color:var(--ink-soft);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+::selection{background:var(--rust);color:var(--paper);}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+</style>
+</helmet>
+
+<div style="background:var(--cream);">
+  <dc-import name="SiteNav" active="work" hint-size="100%,76px"></dc-import>
+
+  <!-- HERO -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:3rem var(--section-pad-x) 3.5rem;">
+      <a href="Work.dc.html" style="text-decoration:none;color:inherit;display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);transition:color 160ms var(--ease);" style-hover="color:var(--rust);">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"><polyline points="11 6 5 12 11 18"></polyline><line x1="5" y1="12" x2="19" y2="12"></line></svg>All Work
+      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:2.5rem;align-items:center;">
+        <span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--paper);background:var(--rust);padding:6px 12px;">SoundVision Technologies / TruAudio</span>
+        <span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);border:1px solid var(--line-strong);padding:6px 12px;">Website Rebuild</span>
+        <a href="https://www.truaudio.com" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:inline-flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);border:1px solid var(--ink);padding:6px 12px;transition:background 160ms var(--ease),color 160ms var(--ease);" style-hover="background:var(--ink);color:var(--cream);">
+          <span style="width:6px;height:6px;border-radius:9999px;background:#1F8A5B;display:inline-block;"></span>Live Site
+        </a>
+      </div>
+      <h1 style="font-family:var(--font-editorial);font-weight:300;color:var(--ink);margin:1.75rem 0 0;font-size:clamp(2.75rem,6vw,5rem);line-height:1.04;">Rebuilding <em style="font-style:italic;">truaudio.com</em></h1>
+      <p style="margin:24px 0 0;font-size:1.0625rem;line-height:1.85;color:var(--ink-soft);max-width:70ch;">A complete rebuild of the TruAudio website around how installers actually research, specify, and buy, replacing a structure built around the org chart with one built around the job.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:2.75rem;border-top:1px solid var(--line);padding-top:1.75rem;">
+        <sc-for list="{{ heroMeta }}" as="m" hint-placeholder-count="4">
+          <div>
+            <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px;">{{ m.k }}</div>
+            <div style="font-family:var(--font-editorial);font-weight:400;font-size:1.25rem;color:var(--ink);line-height:1.2;">{{ m.v }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <a href="https://www.truaudio.com" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;position:relative;width:100%;aspect-ratio:1920/1080;max-height:620px;background:var(--ink) url('uploads/Screenshot 2026-06-22 at 7.16.06 PM.png') center/cover no-repeat;border-top:1px solid var(--line);">
+      <span style="position:absolute;left:24px;bottom:18px;font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-muted);">Screenshot \u00b7 truaudio.com homepage \u00b7 1920\u00d71080</span>
+      <span style="position:absolute;right:24px;top:24px;display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:9px 14px;">Visit Site
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M7 17 17 7"></path><polyline points="9 7 17 7 17 15"></polyline></svg>
+      </span>
+    </a>
+  </section>
+
+  <!-- BACKGROUND -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:3rem;" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">Background</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;">
+        <div style="background:var(--paper);border:1px solid var(--line);border-top:2px solid var(--ink-muted);padding:2.5rem;">
+          <h3 style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);margin:0;font-size:1.6rem;line-height:1;">The Problem</h3>
+          <p style="margin:16px 0 0;font-size:0.975rem;line-height:1.85;color:var(--ink-soft);">The old site was organized the way the company thought about itself, not the way an installer shops. Product lines were buried, specs were hard to compare, and a dealer trying to spec a room had to know TruAudio internal naming to find anything. The structure created friction at exactly the moment a sale was forming.</p>
+        </div>
+        <div style="background:var(--paper);border:1px solid var(--line);border-top:2px solid var(--rust);padding:2.5rem;">
+          <h3 style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);margin:0;font-size:1.6rem;line-height:1;">The Solution</h3>
+          <p style="margin:16px 0 0;font-size:0.975rem;line-height:1.85;color:var(--ink-soft);">Rebuild the information architecture around the installer decision path: room type and application first, product series second, deep specs always one click away. Clear navigation, comparable products, and a structure that respects how the actual buyer moves through a job.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IA DIAGRAM -->
+  <section style="border-bottom:1px solid var(--line);background:var(--paper);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:3rem;" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">Information Architecture</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
+        <sc-for list="{{ ia }}" as="cat" hint-placeholder-count="4">
+          <div style="background:var(--cream);border:1px solid var(--line);">
+            <div style="background:var(--ink);padding:1rem 1.25rem;">
+              <div style="font-family:var(--font-display);text-transform:uppercase;color:var(--cream);font-size:1.25rem;line-height:1;">{{ cat.title }}</div>
+            </div>
+            <ul style="list-style:none;margin:0;padding:1.25rem;display:flex;flex-direction:column;gap:0;">
+              <sc-for list="{{ cat.items }}" as="it" hint-placeholder-count="4"><li style="font-size:0.875rem;line-height:1.4;color:var(--ink-soft);padding:0.7rem 0;border-top:1px solid var(--line);">{{ it }}</li></sc-for>
+            </ul>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS TIMELINE -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:3rem;" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">Process</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;">
+        <sc-for list="{{ process }}" as="p" hint-placeholder-count="4">
+          <div style="padding:0 1.5rem;border-left:1px solid var(--line);position:relative;" style-before="content:'';position:absolute;left:-4px;top:0;width:7px;height:7px;background:var(--rust);">
+            <div style="font-family:var(--font-display);font-size:1.5rem;color:var(--rust);line-height:1;">{{ p.num }}</div>
+            <h3 style="font-family:var(--font-body);font-size:0.875rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink);margin:12px 0 0;">{{ p.title }}</h3>
+            <p style="margin:10px 0 0;font-size:0.875rem;line-height:1.7;color:var(--ink-soft);">{{ p.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section style="border-bottom:1px solid var(--line);background:var(--paper);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5rem var(--section-pad-x);display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
+      <sc-for list="{{ metrics }}" as="m" hint-placeholder-count="4">
+        <div style="text-align:center;padding:1.5rem 1rem;border-left:1px solid var(--line);">
+          <div style="font-family:var(--font-display);color:var(--ink);font-size:3rem;line-height:0.9;">{{ m.stat }}</div>
+          <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--rust);margin-top:14px;">{{ m.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- SOLO (dark) -->
+  <section style="background:var(--ink);border-bottom:1px solid var(--line);">
+    <div style="max-width:880px;margin:0 auto;padding:6rem var(--section-pad-x);text-align:center;">
+      <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:1.5rem;">Solo Build</div>
+      <h2 style="font-family:var(--font-editorial);font-weight:300;color:var(--cream);margin:0;font-size:clamp(1.85rem,3.4vw,2.75rem);line-height:1.25;">IA, content strategy, copy, design, and CMS build, scoped and executed by one person, then maintained as a living site.</h2>
+    </div>
+  </section>
+
+  <!-- CLOSING QUOTE -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:880px;margin:0 auto;padding:6.5rem var(--section-pad-x);text-align:center;">
+      <div style="font-family:var(--font-display);font-size:3rem;color:var(--rust);line-height:0.6;margin-bottom:1rem;">“</div>
+      <blockquote style="margin:0;font-family:var(--font-editorial);font-weight:300;font-style:italic;font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.4;color:var(--ink);">A website should be organized around how the customer buys, not how the company is organized. The rebuild started there and everything else followed.</blockquote>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const heroMeta = [
+      { k: 'Attribution', v: 'SoundVision / TruAudio' },
+      { k: 'Role', v: 'IA, Design, Build' },
+      { k: 'Platform', v: 'CMS Rebuild' },
+      { k: 'Status', v: 'Live' },
+    ];
+    const ia = [
+      { title: 'By Application', items: ['Home theater','Whole-home audio','Outdoor','Commercial'] },
+      { title: 'By Product Series', items: ['Architectural','In-wall / in-ceiling','Outdoor series','Subwoofers'] },
+      { title: 'For Dealers', items: ['Spec sheets','Install guides','Dealer login','Sales tools'] },
+      { title: 'Support', items: ['Documentation','Warranty','Find a dealer','Contact'] },
+    ];
+    const process = [
+      { num: '01', title: 'Audit', body: 'Mapped the old structure against how installers actually search, and surfaced every dead end.' },
+      { num: '02', title: 'Architecture', body: 'Rebuilt the IA around application and product series, with specs always one click away.' },
+      { num: '03', title: 'Design & Copy', body: 'Designed templates and wrote product and category copy in TruAudio\u2019s installer-first voice.' },
+      { num: '04', title: 'Build & Launch', body: 'Built in the CMS, migrated content, launched, and now maintain as a living site.' },
+    ];
+    const metrics = [
+      { stat: '4', label: 'IA categories' },
+      { stat: '1', label: 'Person, end to end' },
+      { stat: 'Live', label: 'And maintained' },
+      { stat: '100%', label: 'Installer-first structure' },
+    ];
+    return { heroMeta, ia, process, metrics };
+  }
+}
+</script>
+</body>
+</html>

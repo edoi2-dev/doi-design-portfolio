@@ -1,0 +1,49 @@
+/* Doi Design Portfolio — Color tokens
+   --------------------------------------------------------------
+   Light + editorial. A cream canvas, ink text, generous white space.
+   Rust is the SINGLE accent, used sparingly: eyebrow lines, top
+   border accents on cards, hover states, accent labels only.
+   Never as a large fill or background.
+   This is the LIGHT counterpart to doimarketingdesign.com (dark). */
+
+:root {
+  /* ---- Base palette ---- */
+  --cream:     #F7F4EE; /* page background */
+  --paper:     #FCFAF6; /* card / raised surfaces */
+  --ink:       #1A1A18; /* primary text, headings */
+  --ink-soft:  #4A4A46; /* secondary text, body copy */
+  --line:      rgba(26, 26, 24, 0.10); /* borders, dividers */
+  --line-strong: rgba(26, 26, 24, 0.22); /* hover / emphasis borders */
+  --rust:      #9B4A3A; /* the one accent */
+  --rust-deep: #823A2C; /* rust hover / pressed */
+
+  /* Tints derived from ink, for muted UI text + faint fills */
+  --ink-muted: rgba(26, 26, 24, 0.55); /* captions, fine print */
+  --ink-faint: rgba(26, 26, 24, 0.04); /* faint zebra / inset fills */
+  --rust-faint: rgba(155, 74, 58, 0.08); /* faint rust wash (selected chips) */
+
+  /* Warm image placeholder gradient (the brand's placeholder treatment) */
+  --placeholder-from: #E8E3D8;
+  --placeholder-to:   #D8D2C4;
+  --placeholder-fill: linear-gradient(135deg, var(--placeholder-from) 0%, var(--placeholder-to) 100%);
+
+  /* ---- Semantic aliases ---- */
+  --bg:               var(--cream);
+  --surface-card:     var(--paper);
+  --surface-inset:    var(--ink-faint);
+
+  --text-primary:     var(--ink);
+  --text-secondary:   var(--ink-soft);
+  --text-muted:       var(--ink-muted);
+  --text-on-accent:   var(--paper);
+
+  --accent:           var(--rust);
+  --accent-hover:     var(--rust-deep);
+  --accent-wash:      var(--rust-faint);
+
+  --border:           var(--line);
+  --border-strong:    var(--line-strong);
+  --border-accent:    var(--rust);
+
+  --focus-ring:       rgba(155, 74, 58, 0.45);
+}

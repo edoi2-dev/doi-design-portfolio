@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap');
+:root{--cream:#F7F4EE;--paper:#FCFAF6;--ink:#1A1A18;--ink-soft:#4A4A46;--line:rgba(26,26,24,0.10);--line-strong:rgba(26,26,24,0.22);--rust:#9B4A3A;--rust-deep:#823A2C;--ink-muted:rgba(26,26,24,0.55);--placeholder-fill:linear-gradient(135deg,#E8E3D8 0%,#D8D2C4 100%);--font-display:'Bebas Neue',sans-serif;--font-editorial:'Cormorant Garamond',Georgia,serif;--font-body:'Montserrat',Arial,sans-serif;--ease:cubic-bezier(0.22,1,0.36,1);--section-pad-x:3rem;--content-max:1120px;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--cream);color:var(--ink-soft);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+::selection{background:var(--rust);color:var(--paper);}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+</style>
+</helmet>
+
+<div style="background:var(--cream);">
+  <dc-import name="SiteNav" active="work" hint-size="100%,76px"></dc-import>
+
+  <!-- HERO -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:3rem var(--section-pad-x) 3.5rem;">
+      <a href="Work.dc.html" style="text-decoration:none;color:inherit;display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);transition:color 160ms var(--ease);" style-hover="color:var(--rust);">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"><polyline points="11 6 5 12 11 18"></polyline><line x1="5" y1="12" x2="19" y2="12"></line></svg>All Work
+      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:2.5rem;">
+        <span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--paper);background:var(--rust);padding:6px 12px;">SoundVision Technologies</span>
+        <span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);border:1px solid var(--line-strong);padding:6px 12px;">TruAudio / VSSL / Alta Labs</span>
+        <span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);border:1px solid var(--line-strong);padding:6px 12px;">Barcelona, Spain</span>
+      </div>
+      <h1 style="font-family:var(--font-editorial);font-weight:300;color:var(--ink);margin:1.75rem 0 0;font-size:clamp(2.75rem,6vw,5rem);line-height:1.04;">ISE <em style="font-style:italic;">Barcelona</em></h1>
+      <p style="margin:24px 0 0;font-size:1.0625rem;line-height:1.85;color:var(--ink-soft);max-width:70ch;">The first time SoundVision owned its booth at an international trade show. Three brands, one stand, a dealer event, and a country's worth of logistics, all planned and run by one person.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:2.75rem;border-top:1px solid var(--line);padding-top:1.75rem;">
+        <sc-for list="{{ heroMeta }}" as="m" hint-placeholder-count="4">
+          <div>
+            <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px;">{{ m.k }}</div>
+            <div style="font-family:var(--font-editorial);font-weight:400;font-size:1.25rem;color:var(--ink);line-height:1.2;">{{ m.v }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:1px;background:var(--line);border-top:1px solid var(--line);width:100%;">
+      <div style="height:540px;overflow:hidden;background:var(--cream) url('assets/photos/ISE-booth.jpg') center/cover no-repeat;"></div>
+      <div style="height:540px;overflow:hidden;background:var(--ink) url('uploads/CR6_1648.jpg') center/cover no-repeat;"></div>
+    </div>
+  </section>
+
+  <!-- FIRST TIME (dark) -->
+  <section style="background:var(--ink);border-bottom:1px solid var(--line);">
+    <div style="max-width:880px;margin:0 auto;padding:5rem var(--section-pad-x);text-align:center;">
+      <h2 style="font-family:var(--font-editorial);font-weight:300;color:var(--cream);margin:0;font-size:clamp(1.85rem,3.6vw,2.9rem);line-height:1.2;">First owned booth. International show. <em style="font-style:italic;color:var(--rust);">One person planning it.</em></h2>
+    </div>
+  </section>
+
+  <!-- CHALLENGES -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:3rem;" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">The Challenges</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+        <sc-for list="{{ challenges }}" as="c" hint-placeholder-count="3">
+          <div style="background:var(--paper);border:1px solid var(--line);border-top:2px solid var(--rust);padding:2.25rem;">
+            <span style="font-family:var(--font-display);font-size:1.75rem;color:var(--rust);line-height:1;">{{ c.num }}</span>
+            <h3 style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);margin:14px 0 0;font-size:1.4rem;line-height:1.05;">{{ c.title }}</h3>
+            <p style="margin:14px 0 0;font-size:0.9375rem;line-height:1.8;color:var(--ink-soft);">{{ c.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BOOTH -->
+  <section style="border-bottom:1px solid var(--line);background:var(--paper);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:3rem;" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">The Booth</div>
+      <!-- booth layout diagram -->
+      <div style="border:1px solid var(--line-strong);background:var(--cream);padding:1.5rem;margin-bottom:1rem;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+          <sc-for list="{{ booth }}" as="z" hint-placeholder-count="3">
+            <div style="border:1px dashed var(--line-strong);border-top:3px solid {{ z.accent }};padding:1.75rem 1.5rem;min-height:130px;display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);font-size:1.5rem;line-height:1;">{{ z.name }}</div>
+              <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted);">{{ z.zone }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="text-align:center;font-family:var(--font-body);font-size:9px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);margin-top:1.25rem;">Stand layout \u00b7 one shared structure, three brand zones, central meeting space</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+        <sc-for list="{{ boothBrands }}" as="b" hint-placeholder-count="3">
+          <div style="background:var(--cream);border:1px solid var(--line);border-top:2px solid {{ b.accent }};padding:2rem;">
+            <h3 style="font-family:var(--font-display);text-transform:uppercase;color:var(--ink);margin:0;font-size:1.6rem;line-height:1;">{{ b.name }}</h3>
+            <p style="margin:12px 0 0;font-size:0.9rem;line-height:1.75;color:var(--ink-soft);">{{ b.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERNATIONAL LOGISTICS -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);display:grid;grid-template-columns:0.8fr 1.4fr;gap:4rem;">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">International Logistics</div>
+        <h2 style="font-family:var(--font-editorial);font-weight:300;color:var(--ink);margin:18px 0 0;font-size:clamp(1.75rem,2.8vw,2.4rem);line-height:1.15;text-align:left;">Running a booth in another country.</h2>
+      </div>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;">
+        <sc-for list="{{ logistics }}" as="l" hint-placeholder-count="5">
+          <li style="display:grid;grid-template-columns:auto 1fr;gap:18px;padding:1.5rem 0;border-top:1px solid var(--line);align-items:baseline;">
+            <span style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--rust);white-space:nowrap;">{{ l.k }}</span>
+            <span style="font-size:0.95rem;line-height:1.7;color:var(--ink-soft);text-align:left;">{{ l.v }}</span>
+          </li>
+        </sc-for>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DEALER EVENT -->
+  <section style="border-bottom:1px solid var(--line);background:var(--paper);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5.5rem var(--section-pad-x);display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center;">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);" style-before="content:'';display:block;width:32px;height:1px;background:var(--rust);">The Dealer Event</div>
+        <h2 style="font-family:var(--font-editorial);font-weight:300;color:var(--ink);margin:18px 0 0;font-size:clamp(1.75rem,2.8vw,2.4rem);line-height:1.15;">A reason to show up, and stay.</h2>
+        <p style="margin:18px 0 0;font-size:1rem;line-height:1.85;color:var(--ink-soft);">Beyond the stand, an off-floor dealer event gave existing and prospective partners a reason to gather, talk, and build the relationships that a booth alone can't. Planned, organized, and hosted alongside everything else, in a city none of us were based in.</p>
+      </div>
+      <div style="position:relative;aspect-ratio:4/3;background:var(--cream) url('assets/photos/dealer-event.jpg') center/cover no-repeat;border:1px solid var(--line);">
+        <span style="position:absolute;left:16px;bottom:14px;font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-muted);">Photo \u00b7 dealer event (authentic)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:var(--content-max);margin:0 auto;padding:5rem var(--section-pad-x);display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
+      <sc-for list="{{ metrics }}" as="m" hint-placeholder-count="4">
+        <div style="text-align:center;padding:1.5rem 1rem;border-left:1px solid var(--line);">
+          <div style="font-family:var(--font-display);color:var(--ink);font-size:3rem;line-height:0.9;">{{ m.stat }}</div>
+          <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--rust);margin-top:14px;">{{ m.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- SOLO (dark) -->
+  <section style="background:var(--ink);border-bottom:1px solid var(--line);">
+    <div style="max-width:880px;margin:0 auto;padding:6rem var(--section-pad-x);text-align:center;">
+      <h2 style="font-family:var(--font-editorial);font-weight:300;color:var(--cream);margin:0;font-size:clamp(2rem,4vw,3.25rem);line-height:1.18;">Three brands. One booth. <em style="font-style:italic;color:var(--rust);">One person. Another country.</em></h2>
+    </div>
+  </section>
+
+  <!-- CLOSING QUOTE -->
+  <section style="border-bottom:1px solid var(--line);">
+    <div style="max-width:880px;margin:0 auto;padding:6.5rem var(--section-pad-x);text-align:center;">
+      <div style="font-family:var(--font-display);font-size:3rem;color:var(--rust);line-height:0.6;margin-bottom:1rem;">&ldquo;</div>
+      <blockquote style="margin:0;font-family:var(--font-editorial);font-weight:300;font-style:italic;font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.4;color:var(--ink);">An international show is a logistics problem wearing a marketing problem's clothes. You plan for both, then you adapt to the half you didn't see coming.</blockquote>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const ink = 'var(--ink)';
+    const rust = 'var(--rust)';
+    const heroMeta = [
+      { k: 'Show', v: 'ISE Barcelona' },
+      { k: 'Brands', v: 'TruAudio / VSSL / Alta Labs' },
+      { k: 'Booth', v: 'First owned' },
+      { k: 'Team', v: 'Solo planner' },
+    ];
+    const challenges = [
+      { num: '01', title: 'First owned booth', body: 'No template to inherit. The first time the company owned its stand rather than sharing a distributor\u2019s, every decision, layout, build, branding, was made from scratch.' },
+      { num: '02', title: 'Three brands, one stand', body: 'TruAudio, VSSL, and Alta Labs each needed a clear presence and message in a single shared structure, without any one brand swallowing the others.' },
+      { num: '03', title: 'Another country', body: 'Booth build, freight, on-site logistics, and a dealer event, all coordinated for a show in Barcelona from a team based in Utah.' },
+    ];
+    const booth = [
+      { name: 'TruAudio', zone: 'Brand zone A', accent: ink },
+      { name: 'VSSL', zone: 'Brand zone B', accent: rust },
+      { name: 'Alta Labs', zone: 'Brand zone C', accent: 'var(--ink-soft)' },
+    ];
+    const boothBrands = [
+      { name: 'TruAudio', accent: ink, body: 'Installer-focused product display anchoring the stand\u2019s credibility with the CI audience.' },
+      { name: 'VSSL', accent: rust, body: 'Lifestyle-forward streaming demo showing whole-home audio in an approachable, consumer-clear way.' },
+      { name: 'Alta Labs', accent: 'var(--ink-soft)', body: 'Networking hardware presence rounding out the SoundVision portfolio for integrators.' },
+    ];
+    const logistics = [
+      { k: 'Freight', v: 'Booth structure, product, and display materials shipped internationally and cleared for the show.' },
+      { k: 'Build', v: 'On-site stand assembly coordinated with show contractors on a fixed move-in window.' },
+      { k: 'Branding', v: 'Signage, graphics, and three-brand layout produced ahead of time and installed on location.' },
+      { k: 'Staffing', v: 'On-floor schedule and demo plan organized for a small traveling team.' },
+      { k: 'Dealer event', v: 'Off-floor venue, invitations, and hosting arranged in-city for partners and prospects.' },
+    ];
+    const metrics = [
+      { stat: '3', label: 'Brands in one booth' },
+      { stat: '1st', label: 'Company-owned stand' },
+      { stat: '1', label: 'Person planning it' },
+      { stat: 'Intl', label: 'Show + dealer event' },
+    ];
+    return { heroMeta, challenges, booth, boothBrands, logistics, metrics };
+  }
+}
+</script>
+</body>
+</html>
