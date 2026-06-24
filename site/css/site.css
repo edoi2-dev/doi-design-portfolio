@@ -510,3 +510,76 @@ input::placeholder, textarea::placeholder { color: var(--ink-muted); }
 .eyebrow.is-visible::before {
   transform: scaleX(1);
 }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Tablet ≤ 960px: tighten padding, collapse featured card */
+@media (max-width: 960px) {
+  :root { --section-pad-x: 2rem; }
+
+  .featured-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .featured-card > *:first-child { min-height: 300px; }
+}
+
+/* Tablet ≤ 900px: 3-col cards → 2-col */
+@media (max-width: 900px) {
+  [style*="repeat(3,1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* Mobile ≤ 640px */
+@media (max-width: 640px) {
+  :root { --section-pad-x: 1.25rem; }
+
+  /* Nav: let height breathe if text wraps at extreme sizes */
+  .site-nav { height: auto; min-height: 60px; }
+  .site-nav > nav { gap: 20px !important; }
+
+  /* Footer */
+  .site-footer { padding: 3rem 0 2rem; }
+
+  /* Reduce section vertical padding */
+  section [style*="--content-max"] {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Multi-col section grids (explicit fr values: heroes, skills, resume, contact, footer) */
+  [style*="grid-template-columns"][style*="fr "] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Repeat-based card and 2-col grids */
+  [style*="repeat(2,1fr)"],
+  [style*="repeat(3,1fr)"],
+  [style*="repeat(3,auto)"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Stats and color swatch grids → 2-col */
+  [style*="repeat(4,1fr)"],
+  [style*="repeat(5,1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Featured card */
+  .featured-card {
+    grid-template-columns: 1fr;
+    grid-column: auto;
+    min-height: auto;
+  }
+  .featured-card > *:first-child { min-height: 240px; }
+
+  /* Work/grid card image thumbs */
+  .work-card > div:first-child,
+  .grid-card > div:first-child { aspect-ratio: 16/9; }
+}
